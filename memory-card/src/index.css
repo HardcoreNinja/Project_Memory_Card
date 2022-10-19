@@ -49,10 +49,15 @@ button {
   height: 36px;
   transition: .75s;
   background: rgba(157, 247, 229, 1);
+
 }
 
 button:hover {
   background: rgba(229, 169, 169, 1);
+}
+
+button:active {
+  transform: scale(.97);
 }
 
 #content {

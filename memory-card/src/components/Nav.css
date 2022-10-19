@@ -1,0 +1,30 @@
+.material-symbols-outlined {
+    font-size: 60px;
+}
+
+#nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        'logo logo logo logo score'
+    ;
+    background: rgba(244, 228, 186, 1);
+}
+
+#logo {
+    grid-area: logo;
+    display: flex;
+    flex-flow: row wrap;
+    place-content: center flex-start;
+    place-items: center flex-start;
+    gap: 10px;
+}
+
+#score {
+    grid-area: score;
+    display: flex;
+    flex-flow: column wrap;
+    place-content: flex-start center;
+    place-items: flex-start center;
+}

@@ -30,6 +30,8 @@
   color: black;
   padding: 0px;
   margin: 0px;
+  max-width: 100vh;
+  max-height: 100vh;
 }
 
 h1 {
@@ -40,10 +42,23 @@ hr {
   border: 1px solid red;
 }
 
+button {
+  border-style: none;
+  border-radius: 5px;
+  width: 120.11px;
+  height: 36px;
+  transition: .75s;
+  background: rgba(157, 247, 229, 1);
+}
+
+button:hover {
+  background: rgba(229, 169, 169, 1);
+}
+
 #content {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 5fr;
+  grid-template-rows: 1fr 3fr;
   grid-template-areas:
     'nav'
     'gameBoard'

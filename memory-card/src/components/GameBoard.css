@@ -1,0 +1,23 @@
+#gameBoard {
+    grid-area: gameBoard;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10fr 1fr;
+    grid-template-areas:
+        'cards'
+        'transport'
+    ;
+
+}
+
+#cards {
+    grid-area: cards;
+}
+
+#transport {
+    grid-area: transport;
+    display: flex;
+    flex-flow: row wrap;
+    place-content: center center;
+    place-items: center center;
+}

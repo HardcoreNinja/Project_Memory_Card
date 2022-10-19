@@ -2,11 +2,38 @@ import React, { Component } from "react";
 import './GameBoard.css';
 
 export default class GameBoard extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            play: false,
+        }
+    }
     render() {
-        return (
-            <div id='gameBoard'>
-                GameBoard
-            </div>
-        );
+
+        if (this.state.play) {
+            return (
+                <div id='gameBoard'>
+                    <div id='cards'>Cards</div>
+                    <div id='transport'>
+                        <button id='actionButton'>
+                            Restart
+                        </button>
+                    </div>
+                </div>
+            );
+        }
+        else if (!this.state.play) {
+            return (
+                <div id='gameBoard'>
+                    <div id='cards'>Cards</div>
+                    <div id='transport'>
+                        <button id='actionButton'>
+                            Play
+                        </button>
+                    </div>
+                </div>
+            );
+        }
     }
 }

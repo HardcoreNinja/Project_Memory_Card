@@ -10,6 +10,7 @@
         'logo logo logo logo score'
     ;
     background: rgba(244, 228, 186, 1);
+    min-width: 100vw;
 }
 
 #logo {

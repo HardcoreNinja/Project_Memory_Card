@@ -26,7 +26,11 @@ export default class GameBoard extends Component {
         else if (!this.state.play) {
             return (
                 <div id='gameBoard'>
-                    <div id='cards'>Cards</div>
+                    <div id='playArea'>
+                        <div id='cards'>
+                            <p>Press <i>Play</i> to Start a Game...</p>
+                        </div>
+                    </div>
                     <div id='transport'>
                         <button id='actionButton'>
                             Play

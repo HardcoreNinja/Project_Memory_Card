@@ -4,14 +4,30 @@
     grid-template-columns: 1fr;
     grid-template-rows: 10fr 1fr;
     grid-template-areas:
-        'cards'
+        'playArea'
         'transport'
     ;
 
 }
 
+#playArea {
+    grid-area: playArea;
+    display: flex;
+    flex-flow: column wrap;
+    place-content: center center;
+    place-items: center center;
+}
+
 #cards {
-    grid-area: cards;
+    display: flex;
+    flex-flow: column wrap;
+    place-content: center;
+    background: rgba(229, 169, 169, 1);
+    border-radius: 5px;
+    width: 85%;
+    height: 85%;
+    box-shadow: 10px 10px 8px 5px rgba(176, 131, 131, 0.45);
+    padding: 10px;
 }
 
 #transport {

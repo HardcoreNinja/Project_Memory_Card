@@ -11,10 +11,6 @@ export default class Global extends Component {
                 score: 0,
                 bestScore: 0,
             },
-
-            transport: {
-                play: false,
-            }
         }
     }
 
@@ -38,22 +34,12 @@ export default class Global extends Component {
         )
     }
 
-    setPlay = (play) => {
-        this.setState(
-            {
-                transport: {
-                    play: play,
-                }
-            }
-        );
-    }
-
 
     render() {
         return (
             <div id='global'>
                 <Nav gameBoard={this.state.gameBoard} />
-                <GameBoard setPlay={this.setPlay} />
+                <GameBoard incrementScore={this.incrementScore} setScoreToBestScore={this.setScoreToBestScore} />
             </div>
         )
     }

@@ -38,7 +38,6 @@ export default class GameBoard extends Component {
 
     startGame = () => {
         this.drawFirstCards()
-
     };
 
     render() {
@@ -51,11 +50,11 @@ export default class GameBoard extends Component {
                                 {this.state.cards}
                             </div>
                         </div>
-                        <div id='transport'>
-                            <button id='actionButton'>
-                                Restart
-                            </button>
-                        </div>
+                    </div>
+                    <div id='transport'>
+                        <button id='actionButton'>
+                            Restart
+                        </button>
                     </div>
                 </div>
             );

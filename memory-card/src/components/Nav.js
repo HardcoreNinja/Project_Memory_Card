@@ -15,8 +15,8 @@ export default class Nav extends Component {
                 </div>
                 {/* Score */}
                 <div id='score'>
-                    <p>Score</p>
-                    <p>Best Score</p>
+                    <p>Score: {this.props.gameBoard.score}</p>
+                    <p>Best Score: {this.props.gameBoard.bestScore}</p>
                 </div>
             </nav>
         );

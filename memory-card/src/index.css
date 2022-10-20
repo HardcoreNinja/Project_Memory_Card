@@ -60,6 +60,10 @@ button:active {
   transform: scale(.97);
 }
 
+ul {
+  list-style: none;
+}
+
 #content {
   display: flex;
   flex-flow: column wrap;

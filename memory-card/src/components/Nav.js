@@ -14,10 +14,10 @@ export default class Nav extends Component {
                     <h1>Memory Game</h1>
                 </div>
                 {/* Score */}
-                <div id='score'>
-                    <p>Score: {this.props.gameBoard.score}</p>
-                    <p>Best Score: {this.props.gameBoard.bestScore}</p>
-                </div>
+                <ul id='score'>
+                    <li key='score'>Score: {this.props.gameBoard.score}</li>
+                    <li key='bestScore'>Best Score: {this.props.gameBoard.bestScore}</li>
+                </ul>
             </nav>
         );
     }

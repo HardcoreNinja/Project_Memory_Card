@@ -7,11 +7,11 @@ export default class GameBoard extends Component {
 
         this.state = {
             play: false,
-            cards: null,
+            currentCards: null,
+
         }
 
-        this.seenCards = [];
-        this.newCard = null;
+        this.seenCards = new Map();
     }
 
     drawFirstCards = async () => {
@@ -21,18 +21,16 @@ export default class GameBoard extends Component {
             try {
                 const response = await fetch('https://api.giphy.com/v1/gifs/random?api_key=uOHxwfL5iDZiiTqJYF4ecjttW6A9BqW6&tag=pillow:', { mode: 'cors' });
                 const result = await response.json();
-                tempArray.push(<img key={result.data.images.original.url} src={result.data.images.original.url} alt={result.data.title} className='card' />);
+                tempArray.push(result.data.images.original.url);
 
             } catch (error) {
                 console.log(error);
             }
         }
 
-        this.seenCards = tempArray;
-
         this.setState({
             play: true,
-            cards: tempArray,
+            currentCards: tempArray,
         });
     }
 
@@ -47,7 +45,10 @@ export default class GameBoard extends Component {
                     <div id='playArea'>
                         <div id='cards'>
                             <div id='cardContainer'>
-                                {this.state.cards}
+                                <img src={this.state.currentCards[0]} alt={this.state.currentCards[0]} className='card' id='card0' />
+                                <img src={this.state.currentCards[1]} alt={this.state.currentCards[1]} className='card' id='card1' />
+                                <img src={this.state.currentCards[2]} alt={this.state.currentCards[2]} className='card' id='card2' />
+                                <img src={this.state.currentCards[3]} alt={this.state.currentCards[3]} className='card' id='card3' />
                             </div>
                         </div>
                     </div>

@@ -107,6 +107,16 @@ export default class GameBoard extends Component {
         this.drawFirstCards()
     };
 
+    restart = () => {
+        this.seenCards = [];
+        this.setState({
+            loader: false,
+            play: false,
+            currentCards: null,
+        });
+        this.props.restart();
+    }
+
     render() {
         if (this.state.loader) {
             return (
@@ -118,7 +128,6 @@ export default class GameBoard extends Component {
                     </div>
                     <div id='transport'>
                         <button id='actionButton'>
-                            Play
                         </button>
                     </div>
                 </div>
@@ -138,7 +147,7 @@ export default class GameBoard extends Component {
                         </div>
                     </div>
                     <div id='transport'>
-                        <button id='actionButton'>
+                        <button onClick={this.restart} id='actionButton'>
                             Restart
                         </button>
                     </div>

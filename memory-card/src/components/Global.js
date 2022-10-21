@@ -36,13 +36,22 @@ export default class Global extends Component {
         )
     }
 
+    restart = () => {
+        this.setState({
+            gameBoard: {
+                score: 0,
+                bestScore: 0,
+            },
+        });
+    }
+
 
 
     render() {
         return (
             <div id='global'>
                 <Nav gameBoard={this.state.gameBoard} />
-                <GameBoard incrementScore={this.incrementScore} setScoreToBestScore={this.setScoreToBestScore} />
+                <GameBoard incrementScore={this.incrementScore} setScoreToBestScore={this.setScoreToBestScore} restart={this.restart} />
             </div>
         )
     }

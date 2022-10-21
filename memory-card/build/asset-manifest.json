@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Project_Memory_Card/static/css/main.8ffbef3e.css",
+    "main.js": "/Project_Memory_Card/static/js/main.aa6677f8.js",
+    "static/media/Ubuntu-Regular.ttf": "/Project_Memory_Card/static/media/Ubuntu-Regular.1cbb1b79a23478cc89ad.ttf",
+    "static/media/OpenSans-Regular.ttf": "/Project_Memory_Card/static/media/OpenSans-Regular.77c09223204154ae8d43.ttf",
+    "index.html": "/Project_Memory_Card/index.html",
+    "main.8ffbef3e.css.map": "/Project_Memory_Card/static/css/main.8ffbef3e.css.map",
+    "main.aa6677f8.js.map": "/Project_Memory_Card/static/js/main.aa6677f8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8ffbef3e.css",
+    "static/js/main.aa6677f8.js"
+  ]
+}

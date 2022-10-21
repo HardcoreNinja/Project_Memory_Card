@@ -26,14 +26,25 @@ export default class Global extends Component {
     }
 
     setScoreToBestScore = () => {
-        this.setState(
-            {
-                gameBoard: {
-                    bestScore: this.state.gameBoard.score,
-                    score: 0,
+        if (this.state.gameBoard.score > this.state.gameBoard.bestScore)
+            this.setState(
+                {
+                    gameBoard: {
+                        bestScore: this.state.gameBoard.score,
+                        score: 0,
+                    }
                 }
-            }
-        )
+            );
+        else if (this.state.gameBoard.score <= this.state.gameBoard.bestScore)
+            this.setState(
+                {
+                    gameBoard: {
+                        bestScore: this.state.gameBoard.bestScore,
+                        score: 0,
+                    }
+                }
+            );
+
     }
 
     restart = () => {

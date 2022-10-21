@@ -6,9 +6,9 @@ export default class GameBoard extends Component {
         super(props);
 
         this.state = {
+            loader: false,
             play: false,
             currentCards: null,
-
         }
 
         this.seenCards = [];
@@ -93,16 +93,37 @@ export default class GameBoard extends Component {
         }
 
         this.setState({
+            loader: false,
             play: true,
             currentCards: tempArray,
         });
     }
 
     startGame = () => {
+        this.setState({
+            loader: true,
+        })
+
         this.drawFirstCards()
     };
 
     render() {
+        if (this.state.loader) {
+            return (
+                <div id='gameBoard'>
+                    <div id='playArea'>
+                        <div id='cards'>
+                            <div className="loader" />
+                        </div>
+                    </div>
+                    <div id='transport'>
+                        <button id='actionButton'>
+                            Play
+                        </button>
+                    </div>
+                </div>
+            );
+        }
         if (this.state.play) {
             return (
                 <div id='gameBoard'>

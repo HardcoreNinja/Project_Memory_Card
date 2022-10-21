@@ -19,6 +19,7 @@ export default class Global extends Component {
             {
                 gameBoard: {
                     score: this.state.gameBoard.score + 1,
+                    bestScore: this.state.gameBoard.bestScore,
                 }
             }
         )
@@ -29,10 +30,12 @@ export default class Global extends Component {
             {
                 gameBoard: {
                     bestScore: this.state.gameBoard.score,
+                    score: 0,
                 }
             }
         )
     }
+
 
 
     render() {

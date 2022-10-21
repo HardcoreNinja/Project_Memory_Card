@@ -127,8 +127,11 @@ export default class GameBoard extends Component {
                         </div>
                     </div>
                     <div id='transport'>
-                        <button id='actionButton'>
-                        </button>
+                        <button id='actionButton' style={
+                            {
+                                background: 'transparent'
+                            }
+                        } />
                     </div>
                 </div>
             );
